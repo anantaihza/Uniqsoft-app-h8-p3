@@ -1,5 +1,5 @@
-import Navbar from '@/components/home/Navbar';
-import Image from 'next/image';
+import Navbar from '@/components/Navbar';
+// import Image from 'next/image';
 
 {
   /* <Image
