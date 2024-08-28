@@ -2,7 +2,7 @@ import { ObjectId } from 'mongodb';
 import { getMongoClientInstance } from '../config';
 
 const DATABASE_NAME = 'h8-gc2-ecommerce';
-const COLLECTION_USER = 'products';
+const COLLECTION_PRODUCT = 'products';
 
 export interface ProductModel {
   _id: ObjectId;
@@ -30,9 +30,20 @@ export const getProducts = async () => {
   const db = await getDB();
 
   const products = (await db
-    .collection(COLLECTION_USER)
+    .collection(COLLECTION_PRODUCT)
     .find()
     .toArray()) as ProductModel[];
 
   return products;
+};
+
+export const getProductById = async (id: string) => {
+  const db = await getDB();
+  const productId = new ObjectId(id);
+
+  const product = (await db
+    .collection(COLLECTION_PRODUCT)
+    .findOne({ _id: productId })) as ProductModel;
+
+  return product;
 };
