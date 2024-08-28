@@ -1,11 +1,10 @@
 {
   "products": [
     {
-      "id": 1,
       "name": "AIRism Cotton Oversized T-Shirt | Striped Half Sleeve",
-      "slug": "",
+      "slug": "airism-cotton-oversized-t-shirt-striped-half-sleeve-",
       "description": "Smooth 'AIRism' fabric with the look of cotton. Narrow crew neck for a sleek look. Dropped shoulders and roomy half-length sleeves. The fabric creates a flattering silhouette.",
-      "excerpt": "",
+      "excerpt": "Smooth 'AIRism' fabric with the look of cotton. Narrow crew neck for a sleek look.",
       "price": 199000,
       "tags": ["T-Shirts", "Men"],
       "thumbnail": "https://image.uniqlo.com/UQ/ST3/id/imagesgoods/461914/item/idgoods_69_461914.jpg?width=400",
@@ -18,11 +17,10 @@
       "updatedAt": "2024-03-18T14:47:12.101Z"
     },
     {
-      "id": 2,
       "name": "SUPIMA Cotton Crew Neck T-Shirt | Short Sleeve",
-      "slug": "",
+      "slug": "supima-cotton-crew-neck-t-shirt-short-sleeve-",
       "description": "Smooth, pill-resistant 100% SUPIMA® cotton made with ultra-long fibers. Basic design styles on its own or in layered looks. Designed with meticulous attention to detail, down to the collar width and stitching.",
-      "excerpt": "",
+      "excerpt": "Smooth, pill-resistant 100% SUPIMA® cotton made with ultra-long fibers.",
       "price": 199000,
       "tags": ["T-Shirts", "Men"],
       "thumbnail": "https://image.uniqlo.com/UQ/ST3/id/imagesgoods/455365/item/idgoods_66_455365.jpg?width=400",
@@ -35,11 +33,10 @@
       "updatedAt": "2024-03-18T14:47:12.101Z"
     },
     {
-      "id": 3,
       "name": "DRY-EX T-Shirt | Short Sleeve Print",
-      "slug": "",
+      "slug": "dry-ex-t-shirt-short-sleeve-print-",
       "description": "'DRY-EX' fabric quickly absorbs and wicks away moisture to keep your skin feeling fresh. Abstract all-over print. Mesh fabric for improved breathability. Based on Kei Nishikori’s game wear. *Please note that pattern placement may differ from the image. Your understanding is appreciated.",
-      "excerpt": "",
+      "excerpt": "'DRY-EX' fabric quickly absorbs and wicks away moisture to keep your skin feeling fresh. Abstract all-over print.",
       "price": 249000,
       "tags": ["T-Shirts", "Men"],
       "thumbnail": "https://image.uniqlo.com/UQ/ST3/id/imagesgoods/471585/item/idgoods_09_471585.jpg?width=400",
@@ -52,11 +49,10 @@
       "updatedAt": "2024-03-18T14:47:12.101Z"
     },
     {
-      "id": 4,
       "name": "AIRism Cotton T-Shirt | Sleeveless",
-      "slug": "",
+      "slug": "airism-cotton-t-shirt-sleeveless-",
       "description": "Smooth 'AIRism' fabric with the look of cotton. DRY technology and Cool Touch features make it ideal for sports and travel. Versatile basic design and regular cut for easy styling. Classic crew neck can be worn on its own or in layered looks. Side slits.",
-      "excerpt": "",
+      "excerpt": "Smooth 'AIRism' fabric with the look of cotton. DRY technology and Cool Touch features make it ideal for sports and travel.",
       "price": 199000,
       "tags": ["T-Shirts", "Men"],
       "thumbnail": "https://image.uniqlo.com/UQ/ST3/id/imagesgoods/471587/item/idgoods_07_471587.jpg?width=400",
@@ -69,11 +65,10 @@
       "updatedAt": "2024-03-18T14:47:12.101Z"
     },
     {
-      "id": 5,
       "name": "Waffle Henley Neck Pullover | Long Sleeve",
-      "slug": "",
+      "slug": "waffle-henley-neck-pullover-long-sleeve-",
       "description": "Soft and airy waffle fabric with a textured feel. Authentic utility Henley neck design. Versatile round hem design. Ribbed cuffs make it easy to roll up the sleeves. Regular cut, perfect for wearing solo or as an inner layer.",
-      "excerpt": "",
+      "excerpt": "Soft and airy waffle fabric with a textured feel. Authentic utility Henley neck design. Versatile round hem design.",
       "price": 299000,
       "tags": ["Sweat", "Men"],
       "thumbnail": "https://image.uniqlo.com/UQ/ST3/id/imagesgoods/435805/item/idgoods_32_435805.jpg?width=400",
@@ -86,11 +81,10 @@
       "updatedAt": "2024-03-18T14:47:12.101Z"
     },
     {
-      "id": 6,
       "name": "Reversible Parka (Water-Repellent)",
-      "slug": "",
-      "description": "Water-repellent finish on the outer side. *The fabric is coated with a water-repellent agent so the effect lasts longer. The finish is not permanent. Soft jersey lining. Inner and outer side pockets. Drawstring adjusters at the hem and hood let you adjust the fit. Reversible design. Simple, versatile design in a regular fit.",
-      "excerpt": "",
+      "slug": "reversible-parka-water-repellent-",
+      "description": "Water-repellent finish on the outer side. The fabric is coated with a water-repellent agent so the effect lasts longer. The finish is not permanent. Soft jersey lining. Inner and outer side pockets. Drawstring adjusters at the hem and hood let you adjust the fit. Reversible design. Simple, versatile design in a regular fit.",
+      "excerpt": "Water-repellent finish on the outer side. The fabric is coated with a water-repellent agent so the effect lasts longer.",
       "price": 599000,
       "tags": ["Outerwear", "Men"],
       "thumbnail": "https://image.uniqlo.com/UQ/ST3/id/imagesgoods/464027/item/idgoods_34_464027.jpg?width=400",
@@ -103,11 +97,10 @@
       "updatedAt": "2024-03-18T14:47:12.101Z"
     },
     {
-      "id": 7,
       "name": "Utility Short Blouson",
-      "slug": "",
+      "slug": "utility-short-blouson-",
       "description": "Chest pocket and waist pockets with convenient hand pockets. Accented by corduroy collar and cuff details plus a checked lining. Relaxed cut.",
-      "excerpt": "",
+      "excerpt": "Chest pocket and waist pockets with convenient hand pockets.",
       "price": 999000,
       "tags": ["Outerwear", "Men"],
       "thumbnail": "https://image.uniqlo.com/UQ/ST3/id/imagesgoods/470117/item/idgoods_57_470117.jpg?width=400",
@@ -120,11 +113,10 @@
       "updatedAt": "2024-03-18T14:47:12.101Z"
     },
     {
-      "id": 8,
       "name": "PUFFTECH Parka",
-      "slug": "",
+      "slug": "pufftech-parka-",
       "description": "Lightweight, and warm 'PUFFTECH' with the latest high-performance fiber technology. Special material made by weaving two pieces of fabric together, so there are no needle holes, making it difficult for rain and wind to penetrate. Water-repellent finish. Stretchable tape and gathers from the sides to the back of the cuffs and hem reduce cold air infiltration.",
-      "excerpt": "",
+      "excerpt": "Lightweight, and warm 'PUFFTECH' with the latest high-performance fiber technology.",
       "price": 999000,
       "tags": ["Outerwear", "Men"],
       "thumbnail": "https://image.uniqlo.com/UQ/ST3/id/imagesgoods/470118/item/idgoods_01_470118.jpg?width=400",
@@ -137,11 +129,10 @@
       "updatedAt": "2024-03-18T14:47:12.101Z"
     },
     {
-      "id": 9,
       "name": "Jersey Over Shirt | Denim Long Sleeve",
-      "slug": "",
+      "slug": "jersey-over-shirt-denim-long-sleeve-",
       "description": "Soft, comfy, finely-brushed jersey fabric with a denim look. Relaxed silhouette is perfect for styling on its own or layering.",
-      "excerpt": "",
+      "excerpt": "Soft, comfy, finely-brushed jersey fabric with a denim look.",
       "price": 999000,
       "tags": ["Outerwear", "Men"],
       "thumbnail": "https://image.uniqlo.com/UQ/ST3/id/imagesgoods/470299/item/idgoods_09_470299.jpg?width=400",
@@ -154,11 +145,10 @@
       "updatedAt": "2024-03-18T14:47:12.101Z"
     },
     {
-      "id": 10,
       "name": "Denim Trucker Jacket",
-      "slug": "",
+      "slug": "denim-trucker-jacket-",
       "description": "Denim fabric with added stretch for comfort. A wardrobe staple for casual styling. Unisex design with a relaxed cut. The short length pairs well with voluminous bottoms.",
-      "excerpt": "",
+      "excerpt": "Denim fabric with added stretch for comfort.",
       "price": 699000,
       "tags": ["Outerwear", "Men"],
       "thumbnail": "https://image.uniqlo.com/UQ/ST3/id/imagesgoods/470047/item/idgoods_68_470047.jpg?width=400",
@@ -171,11 +161,10 @@
       "updatedAt": "2024-03-18T14:47:12.101Z"
     },
     {
-      "id": 11,
       "name": "Cotton Relax Ankle Pants",
-      "slug": "",
+      "slug": "cotton-relax-ankle-pants-",
       "description": "Elastic waist with an inner drawstring for easy size adjustment. Comfy 100% cotton. Versatile relaxed cut and elastic waistband. Tapered cut makes styling easy. Sleek ankle length. Pockets at both sides.",
-      "excerpt": "",
+      "excerpt": "Elastic waist with an inner drawstring for easy size adjustment. Comfy 100% cotton.",
       "price": 199000,
       "tags": ["Bottom", "Women"],
       "thumbnail": "https://image.uniqlo.com/UQ/ST3/id/imagesgoods/466026/item/idgoods_56_466026.jpg?width=400",
@@ -188,11 +177,10 @@
       "updatedAt": "2024-03-18T14:47:12.101Z"
     },
     {
-      "id": 12,
       "name": "Ultra Stretch Denim Leggings Pants",
-      "slug": "",
+      "slug": "ultra-stretch-denim-leggings-pants-",
       "description": "Ultra Stretch jersey fabric with all-direction stretch. Comfortable mid-rise with an elastic waist. Button size and stitch work for an item that can also be worn alone. Carefully considered back pocket sizing.",
-      "excerpt": "",
+      "excerpt": "Ultra Stretch jersey fabric with all-direction stretch. Comfortable mid-rise with an elastic waist.",
       "price": 299000,
       "tags": ["Bottom", "Women"],
       "thumbnail": "https://image.uniqlo.com/UQ/ST3/id/imagesgoods/464149/item/idgoods_68_464149.jpg?width=400",
@@ -205,11 +193,10 @@
       "updatedAt": "2024-03-18T14:47:12.101Z"
     },
     {
-      "id": 13,
       "name": "Ultra Stretch Leggings Pants",
-      "slug": "",
-      "description": "Ultra Stretch jersey fabric with all-direction stretch. Comfortable mid-rise with an elastic waist. Button size and stitch work for an item that can also be worn alone. Carefully considered back pocket sizing.",
-      "excerpt": "",
+      "slug": "ultra-stretch-leggings-pants-",
+      "description": "Ultra Stretch legging fabric with all-direction stretch. Comfortable mid-rise with an elastic waist. Button size and stitch work for an item that can also be worn alone. Carefully considered back pocket sizing.",
+      "excerpt": "Comfortable mid-rise with an elastic waist. Button size and stitch work for an item that can also be worn alone.",
       "price": 299000,
       "tags": ["Bottom", "Women"],
       "thumbnail": "https://image.uniqlo.com/UQ/ST3/id/imagesgoods/464148/item/idgoods_34_464148.jpg?width=400",
@@ -222,11 +209,10 @@
       "updatedAt": "2024-03-18T14:47:12.101Z"
     },
     {
-      "id": 14,
       "name": "Flannel Pants | Checked",
-      "slug": "",
+      "slug": "flannel-pants-checked-",
       "description": "100% cotton flannel, brushed on both sides for a soft and cozy feel. Elastic waist with an inner drawstring for easy size adjustment. Versatile relaxed silhouette. Pockets at both sides.",
-      "excerpt": "",
+      "excerpt": "100% cotton flannel, brushed on both sides for a soft and cozy feel.",
       "price": 299000,
       "tags": ["Bottom", "Women"],
       "thumbnail": "https://image.uniqlo.com/UQ/ST3/id/imagesgoods/471552/item/idgoods_07_471552.jpg?width=400",
@@ -239,11 +225,10 @@
       "updatedAt": "2024-03-18T14:47:12.101Z"
     },
     {
-      "id": 15,
       "name": "Corduroy Skort",
-      "slug": "",
+      "slug": "corduroy-skort-",
       "description": "Shorts that look like a skirt. Contouring corduroy fabric. Elastic waistband for comfort.",
-      "excerpt": "",
+      "excerpt": "Contouring corduroy fabric. Elastic waistband for comfort.",
       "price": 299000,
       "tags": ["Bottom", "Women"],
       "thumbnail": "https://image.uniqlo.com/UQ/ST3/id/imagesgoods/471423/item/idgoods_35_471423.jpg?width=400",
@@ -256,11 +241,10 @@
       "updatedAt": "2024-03-18T14:47:12.101Z"
     },
     {
-      "id": 16,
       "name": "KIDS Dry Sweat Full-Zip Hoodie Bicolor",
-      "slug": "",
+      "slug": "kids-dry-sweat-full-zip-hoodie-bicolor-",
       "description": "Incredibly stretchy Ultra Stretch fabric for comfort and easy movement. With quick-drying DRY technology. Back collar seam covered with tape for comfort. Name label inside. Sporty design with a cotton outer, perfect for casual styling.",
-      "excerpt": "",
+      "excerpt": "Incredibly stretchy Ultra Stretch fabric for comfort and easy movement. With quick-drying DRY technology.",
       "price": 299000,
       "tags": ["Hoodie", "Kid"],
       "thumbnail": "https://image.uniqlo.com/UQ/ST3/id/imagesgoods/471193/item/idgoods_66_471193.jpg?width=400",
@@ -273,11 +257,10 @@
       "updatedAt": "2024-03-18T14:47:12.101Z"
     },
     {
-      "id": 17,
       "name": "GIRLS Ribbed Mellow T-Shirt",
-      "slug": "",
+      "slug": "girls-ribbed-mellow-t-shirt-",
       "description": "Frilled hem and cuffs with a comfortably fitted silhouette. Soft cotton ribbed fabric for a comfortable fit. Easy to layer or match with different styles.",
-      "excerpt": "",
+      "excerpt": "Frilled hem and cuffs with a comfortably fitted silhouette. Soft cotton ribbed fabric for a comfortable fit.",
       "price": 199000,
       "tags": ["T-Shirts", "Kid"],
       "thumbnail": "https://image.uniqlo.com/UQ/ST3/id/imagesgoods/470709/item/idgoods_60_470709.jpg?width=400",
@@ -290,11 +273,10 @@
       "updatedAt": "2024-03-18T14:47:12.101Z"
     },
     {
-      "id": 18,
       "name": "GIRLS Embroidery T-Shirt | Short Sleeve",
-      "slug": "",
+      "slug": "girls-embroidery-t-shirt-short-sleeve-",
       "description": "Smooth 'AIRism' fabric with the look of cotton. Back collar seam covered with tape for comfort. T-shirt design with added sleeve frills made with contrasting fabric. Perfect for casual and cute styles.",
-      "excerpt": "",
+      "excerpt": "Smooth 'AIRism' fabric with the look of cotton. Back collar seam covered with tape for comfort.",
       "price": 149000,
       "tags": ["T-Shirts", "Kid"],
       "thumbnail": "https://image.uniqlo.com/UQ/ST3/id/imagesgoods/471986/item/idgoods_50_471986.jpg?width=400",
@@ -307,11 +289,10 @@
       "updatedAt": "2024-03-18T14:47:12.101Z"
     },
     {
-      "id": 19,
       "name": "KIDS AIRism Cotton Stripe Crew Neck T-Shirt | Short Sleeve",
-      "slug": "",
+      "slug": "kids-airism-cotton-stripe-crew-neck-t-shirt-short-sleeve-",
       "description": "Smooth 'AIRism' fabric with the look of cotton. Back collar seam covered with tape for comfort. Generous fit that can be worn with any bottoms. Ribbed neckline. Dropped shoulders. Wide stripe pattern that looks great on its own as an accent to your outfit. Versatile style can be worn all year round.",
-      "excerpt": "",
+      "excerpt": "Smooth 'AIRism' fabric with the look of cotton. Back collar seam covered with tape for comfort.",
       "price": 149000,
       "tags": ["T-Shirts", "Kid"],
       "thumbnail": "https://image.uniqlo.com/UQ/ST3/id/imagesgoods/465138/item/idgoods_62_465138.jpg?width=400",
@@ -324,11 +305,10 @@
       "updatedAt": "2024-03-18T14:47:12.101Z"
     },
     {
-      "id": 20,
       "name": "GIRLS mofusand Short Sleeve UT",
-      "slug": "",
+      "slug": "girls-mofusand-short-sleeve-ut-",
       "description": "“mofusand” is an incredibly cute and slightly surreal cat illustration series. A new collection of adorable cats wearing hats resembling sea creatures is now available. This collection also features the very popular “SAMENYAN”.",
-      "excerpt": "",
+      "excerpt": "“mofusand” is an incredibly cute and slightly surreal cat illustration series.",
       "price": 299000,
       "tags": ["T-Shirts", "Kid"],
       "thumbnail": "https://image.uniqlo.com/UQ/ST3/id/imagesgoods/472284/item/idgoods_10_472284.jpg?width=400",

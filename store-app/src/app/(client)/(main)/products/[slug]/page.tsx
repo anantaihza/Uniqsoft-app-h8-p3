@@ -6,27 +6,24 @@ export default function page() {
     <div className="container min-h-screen mx-auto px-10 lg:px-32 flex gap-6">
       <div className="content-img w-[50%] my-auto">
         <div className="carousel carousel-center bg-white rounded-box space-x-4 w-[34rem] h-[34rem]">
-          <div className="carousel-item">
+          <section className="carousel-item" id='slide1'>
             <img
               src="https://image.uniqlo.com/UQ/ST3/id/imagesgoods/461914/item/idgoods_69_461914.jpg?width=750"
               className="rounded-box h-[100%]"
-              id="slide1"
             />
-          </div>
-          <div className="carousel-item">
+          </section>
+          <section className="carousel-item" id='slide2'>
             <img
               src="https://image.uniqlo.com/UQ/ST3/id/imagesgoods/461914/sub/idgoods_461914_sub2.jpg?width=750"
               className="rounded-box h-[100%]"
-              id="slide2"
             />
-          </div>
-          <div className="carousel-item">
+          </section>
+          <section className="carousel-item" id='slide3'>
             <img
               src="https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/461914/sub/goods_461914_sub14.jpg?width=750"
               className="rounded-box h-[100%]"
-              id="slide3"
             />
-          </div>
+          </section>
         </div>
       </div>
       <div className="content w-[50%] my-auto">
