@@ -1,5 +1,6 @@
-import Footer from '@/components/Footer';
-import Navbar from '@/components/Navbar';
+// import Navbar from '@/components/Navbar';
+// import ServerProtected from '@/components/protect-server/ServerProtected';
+import ServerPublic from '@/components/protect-server/ServerPublic';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -14,9 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <>
-      <Navbar/>
-      {children}
-
+      <ServerPublic>{children}</ServerPublic>
     </>
   );
 }
