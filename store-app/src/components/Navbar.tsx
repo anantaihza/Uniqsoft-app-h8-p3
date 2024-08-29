@@ -1,7 +1,19 @@
+import { cookies } from 'next/headers';
 import Link from 'next/link';
+import { redirect } from 'next/navigation';
 import React from 'react';
 
 export default function Navbar() {
+  const handleLogout = async () => {
+    'use server';
+
+    if (cookies().get('Authorization')) {
+      cookies().delete('Authorization');
+    }
+
+    redirect('/');
+  };
+
   return (
     <div className="navbar bg-white px-10 lg:px-32 fixed z-10 top-0 inset-x-0">
       <div className="navbar-start">
@@ -71,12 +83,20 @@ export default function Navbar() {
             />
           </svg>
         </Link>
-        <Link
-          href="/login"
-          className="btn bg-[#FE9345] rounded-full text-white px-6"
-        >
-          Login
-        </Link>
+        {cookies().get('Authorization') ? (
+          <div className="">
+            <form action={handleLogout}>
+              <button type="submit">Logout</button>
+            </form>
+          </div>
+        ) : (
+          <Link
+            href="/login"
+            className="btn bg-[#FE9345] rounded-full text-white px-6"
+          >
+            Login
+          </Link>
+        )}
       </div>
     </div>
   );
