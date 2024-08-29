@@ -13,7 +13,7 @@ export async function GET(request: Request) {
     const id = String(headers().get('x-user-id'));
     const wishlist = await getWishlist(id);
 
-    return Response.json(wishlist[0].wishlist);
+    return Response.json(wishlist);
   } catch (error) {
     console.log(error);
     return Response.json(

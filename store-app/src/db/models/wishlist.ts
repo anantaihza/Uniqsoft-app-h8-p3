@@ -24,39 +24,43 @@ export const getDB = async () => {
 
 export const getWishlist = async (id: string) => {
   const db = await getDB();
+
   const agg = [
     {
-      '$match': {
-        '_id': new ObjectId(id)
-      }
-    }, {
-      '$lookup': {
-        'from': 'wishlist', 
-        'localField': '_id', 
-        'foreignField': 'userId', 
-        'as': 'wishlist'
-      }
-    }, {
-      '$lookup': {
-        'from': 'products', 
-        'localField': 'wishlist.productId', 
-        'foreignField': '_id', 
-        'as': 'wishlist'
-      }
-    }, {
-      '$project': {
-        '_id': 0, 
-        'password': 0, 
-        'name': 0, 
-        'username': 0, 
-        'email': 0
-      }
-    }
+      $match: {
+        userId: new ObjectId(id),
+      },
+    },
+    {
+      $lookup: {
+        from: 'products',
+        localField: 'productId',
+        foreignField: '_id',
+        as: 'product',
+      },
+    },
+    {
+      $unwind: {
+        path: '$product',
+        preserveNullAndEmptyArrays: false,
+      },
+    },
+    {
+      $project: {
+        createdAt: 0,
+        updatedAt: 0,
+        userId: 0,
+        productId: 0,
+      },
+    },
   ];
 
-  const wishlist = await db.collection('users').aggregate(agg).toArray();
+  const wishlist = await db
+    .collection(COLLECTION_WISHLIST)
+    .aggregate(agg)
+    .toArray();
 
-  console.log(wishlist);
+  // console.log(wishlist);
   return wishlist;
 };
 

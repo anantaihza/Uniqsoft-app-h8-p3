@@ -31,7 +31,7 @@ export default async function page({ params }: TypeProp) {
     <div className="container min-h-screen mx-auto px-10 lg:px-32 flex gap-6">
       <div className="content-img w-[50%] my-auto">
         <div className="carousel carousel-center bg-white rounded-box space-x-4 w-[34rem] h-[34rem]">
-          {product?.images.map((image, index) => {
+          {product.images ? product.images.map((image, index) => {
             return (
               <section
                 key={index}
@@ -41,25 +41,25 @@ export default async function page({ params }: TypeProp) {
                 <img src={image} className="rounded-box h-[100%]" alt={`${product.name}-${index}`} />
               </section>
             );
-          })}
+          }) : null}
         </div>
       </div>
       <div className="content w-[50%] my-auto">
         <div className="flex gap-3">
-          {product.tags.map((tag, index) => {
+          {product.tags ? product.tags.map((tag, index) => {
             return (
               <div key={index} className="badge badge-outline">
                 {tag}
               </div>
             );
-          })}
+          }) : null}
         </div>
         <h2 className="mt-4 font-black text-4xl text-[#303459]">
           {product.name}
         </h2>
 
         <div className="flex gap-6 mt-10">
-          {product.images.map((image, index) => {
+          {product.images ? product.images.map((image, index) => {
             return (
               <Link href={`#image-${index}`} key={index}>
                 <img
@@ -69,7 +69,7 @@ export default async function page({ params }: TypeProp) {
                 />
               </Link>
             );
-          })}
+          }) : null}
         </div>
 
         <div className="mt-10">

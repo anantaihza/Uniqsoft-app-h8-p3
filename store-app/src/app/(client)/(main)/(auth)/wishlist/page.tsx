@@ -1,63 +1,49 @@
+import CardWishlist from '@/components/CardWishlist';
+import Footer from '@/components/Footer';
 import ServerProtected from '@/components/protect-server/ServerProtected';
+import { ProductModel } from '@/db/models/product';
+import { ObjectId } from 'mongodb';
+import { cookies } from 'next/headers';
 
-export default function page() {
-  const tags = ['T-Shirts', 'Men'];
+interface TypeItem {
+  _id: ObjectId;
+  product: ProductModel;
+}
+
+const fetchWishlist = async () => {
+  const res = await fetch('http://localhost:3000' + '/api/wishlist', {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      Cookie: cookies().toString(),
+    },
+  });
+
+  const data = await res.json();
+
+  return data;
+};
+
+export default async function page() {
+  const wishlist: TypeItem[] = await fetchWishlist();
+
+  // console.log(wishlist);
+
   return (
     <ServerProtected>
-      <div className="mt-28 container mx-auto px-10 lg:px-32">
+      <div className="mt-28 mb-10 min-h-screen container mx-auto px-10 lg:px-32">
         <h2 className="font-black text-[#303459] text-4xl mt-12">Wishlist</h2>
         <p className="mt-4 font-bold text-[#A3A2A8]">
-          <span className="text-[#FE9345]">3 items</span> in your shopping cart
+          <span className="text-[#FE9345]">{wishlist.length} items</span> in
+          your shopping cart
         </p>
-        <div className="mt-10">
-          <div className="bg-[#EFF6FF] p-10 flex gap-10 rounded-xl">
-            <div className="">
-              <img
-                className="w-36 rounded-xl"
-                src="https://image.uniqlo.com/UQ/ST3/id/imagesgoods/461914/item/idgoods_69_461914.jpg?width=750"
-                alt=""
-              />
-            </div>
-            <div className="grow">
-              <div className="flex gap-3">
-                {tags.map((tag) => {
-                  return (
-                    <div className="badge badge-outline text-[#303459]">
-                      {tag}
-                    </div>
-                  );
-                })}
-              </div>
-              <h2 className="mt-2 font-bold text-xl text-[#FE9345]">
-                AIRism Cotton Oversized T-Shirt | Striped Half Sleeve
-              </h2>
-
-              <div className="mt-4">
-                <p className="text-[#303459] font-semibold">Price: </p>
-                <h4 className="font-bold text-xl text-[#303459]">Rp. 199000</h4>
-              </div>
-            </div>
-            <div className="action flex items-center">
-              <button className="btn btn-circle btn-outline">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
+        <div className="mt-10 flex flex-col gap-5">
+          {wishlist.map((item) => {
+            return <CardWishlist key={String(item._id)} item={item} />;
+          })}
         </div>
       </div>
+      <Footer />
     </ServerProtected>
   );
 }

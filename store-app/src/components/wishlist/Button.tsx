@@ -1,15 +1,17 @@
 'use client';
 
-import { AddWishlist } from "@/actions/wishlist";
+import { AddWishlist } from '@/actions/wishlist';
 
 export default function Button({ productId }: { productId: string }) {
-  
-  const handleWishlist = async (id: string) =>{
-    await AddWishlist(id)
-  }
-  
+  const handleWishlist = async (id: string) => {
+    await AddWishlist(id);
+  };
+
   return (
-    <button onClick={() => handleWishlist(productId)} className="btn btn-lg bg-[#FE9345] text-white rounded-full mt-10 flex gap-3 px-10">
+    <button
+      onClick={() => handleWishlist(productId)}
+      className="btn btn-lg bg-[#FE9345] text-white rounded-full mt-10 flex gap-3 px-10"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"

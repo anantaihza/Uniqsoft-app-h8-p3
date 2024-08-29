@@ -5,9 +5,13 @@ interface TypeProduct {
   product: ProductModel;
 }
 
+// ! Perlu kah add wishlist di card? 
 export default function Card({ product }: TypeProduct) {
   return (
-    <Link href={`/products/${product.slug}`} className="card bg-base-100 shadow-xl">
+    <Link
+      href={`/products/${product.slug}`}
+      className="card bg-base-100 shadow-xl"
+    >
       <figure>
         <img src={product.thumbnail} alt={product.name} className="" />
       </figure>
@@ -21,12 +25,9 @@ export default function Card({ product }: TypeProduct) {
             );
           })}
         </div>
-        <h2 className="card-title h-14 line-clamp-2">
-          {product.name}
-          {/* <div className="badge badge-secondary">NEW</div> */}
-        </h2>
-        <h6 className='mt-3 font-bold text-xl'>Rp. {product.price}</h6>
-        <p className='line-clamp-2'>{product.excerpt}</p>
+        <h2 className="card-title h-14 line-clamp-2">{product.name}</h2>
+        <h6 className="mt-3 font-bold text-xl">Rp. {product.price}</h6>
+        <p className="line-clamp-2">{product.excerpt}</p>
       </div>
     </Link>
   );
