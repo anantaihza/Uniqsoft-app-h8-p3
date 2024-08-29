@@ -47,3 +47,15 @@ export const getProductById = async (id: string) => {
 
   return product;
 };
+
+export const getNewProducts = async () => {
+  const db = await getDB();
+  const products = (await db
+    .collection(COLLECTION_PRODUCT)
+    .find()
+    .sort({ price: -1 })
+    .limit(4)
+    .toArray()) as ProductModel[];
+
+  return products;
+};

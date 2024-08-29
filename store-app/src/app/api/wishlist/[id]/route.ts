@@ -1,4 +1,4 @@
-import { deleteWishlist } from "@/db/models/wishlist";
+import { deleteWishlist } from '@/db/models/wishlist';
 
 interface PropParams {
   params: {
@@ -7,7 +7,15 @@ interface PropParams {
 }
 
 export async function DELETE(request: Request, { params }: PropParams) {
-  const wishlist = await deleteWishlist(params.id)
+  try {
+    const wishlist = await deleteWishlist(params.id);
 
-  return Response.json(wishlist)
+    return Response.json(wishlist);
+  } catch (error) {
+    console.log(error, "<error");
+    
+    return Response.json({
+      message: error
+    })
+  }
 }

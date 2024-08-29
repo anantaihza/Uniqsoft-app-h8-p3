@@ -29,9 +29,7 @@ export async function POST(request: Request) {
 
       return Response.json(
         {
-          error: {
-            message: `${errorPath} ${errorMessage}`,
-          },
+          message: `${errorPath} ${errorMessage}`,
         },
         { status: 400 }
       );

@@ -7,7 +7,16 @@ interface PropParams {
 }
 
 export async function GET(request: Request, { params }: PropParams) {
-  const product = await getProductById(params.id);
+  try {
+    const product = await getProductById(params.id);
 
-  return Response.json(product);
+    return Response.json(product, { status: 200 });
+  } catch (error) {
+    return Response.json(
+      {
+        message: 'Internal Server Error',
+      },
+      { status: 500 }
+    );
+  }
 }
