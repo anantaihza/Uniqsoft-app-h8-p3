@@ -38,6 +38,15 @@ export const createUser = async (user: UserModelInput) => {
   return newUser;
 };
 
+export const getUserByUsername = async (username: string) => {
+  const db = await getDB();
+  const user = (await db
+    .collection(COLLECTION_USER)
+    .findOne({ username: username })) as UserModel;
+
+  return user;
+};
+
 export const getUserByEmail = async (email: string) => {
   const db = await getDB();
   const user = (await db
@@ -46,4 +55,3 @@ export const getUserByEmail = async (email: string) => {
 
   return user;
 };
-
