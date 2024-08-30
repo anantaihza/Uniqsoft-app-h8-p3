@@ -10,7 +10,7 @@ export default function Card({ product }: TypeProduct) {
   return (
     <Link
       href={`/products/${product.slug}`}
-      className="card bg-base-100 shadow-xl"
+      className="card bg-base-100 border"
     >
       <figure>
         <img src={product.thumbnail} alt={product.name} className="" />
