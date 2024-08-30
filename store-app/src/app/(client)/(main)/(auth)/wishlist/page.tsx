@@ -1,6 +1,7 @@
 import CardWishlist from '@/components/CardWishlist';
 import Footer from '@/components/Footer';
 import ServerProtected from '@/components/protect-server/ServerProtected';
+import { BASE_URL } from '@/constants';
 import { ProductModel } from '@/db/models/product';
 import { ObjectId } from 'mongodb';
 import { cookies } from 'next/headers';
@@ -11,7 +12,7 @@ interface TypeItem {
 }
 
 const fetchWishlist = async () => {
-  const res = await fetch('http://localhost:3000' + '/api/wishlist', {
+  const res = await fetch(BASE_URL + '/api/wishlist', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',

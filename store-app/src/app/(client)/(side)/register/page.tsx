@@ -1,3 +1,4 @@
+import { BASE_URL } from '@/constants';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
 
@@ -10,7 +11,7 @@ export default function page() {
     const email = formData.get('email');
     const password = formData.get('password');
 
-    const res = await fetch('http://localhost:3000' + '/api/register', {
+    const res = await fetch(BASE_URL + '/api/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

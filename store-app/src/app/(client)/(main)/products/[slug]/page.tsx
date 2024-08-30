@@ -1,4 +1,5 @@
 import Button from '@/components/wishlist/Button';
+import { BASE_URL } from '@/constants';
 import { ProductModel } from '@/db/models/product';
 import Link from 'next/link';
 
@@ -12,7 +13,7 @@ const fetchDetailProduct = async (slug: string) => {
   const splitSlug = slug.split('-');
   const id = splitSlug[splitSlug.length - 1];
 
-  const res = await fetch('http://localhost:3000' + `/api/products/${id}`, {
+  const res = await fetch(BASE_URL + `/api/products/${id}`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',

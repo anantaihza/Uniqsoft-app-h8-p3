@@ -1,4 +1,5 @@
 // import ServerPublic from '@/components/protect-server/ServerPublic';
+import { BASE_URL } from '@/constants';
 import { cookies } from 'next/headers';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
@@ -18,7 +19,7 @@ export default function Login() {
     const password = formData.get('password');
 
     // ? base url taro mana
-    const res = await fetch('http://localhost:3000' + '/api/login', {
+    const res = await fetch(BASE_URL + '/api/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -1,9 +1,10 @@
 import React from 'react';
 import Card from '../Card';
 import { ProductModel } from '@/db/models/product';
+import { BASE_URL } from '@/constants';
 
 const fetchNewProduct = async () => {
-  const res = await fetch('http://localhost:3000' + '/api/products/new', {
+  const res = await fetch(BASE_URL + '/api/products/new', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',

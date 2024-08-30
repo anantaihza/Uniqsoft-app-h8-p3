@@ -1,10 +1,11 @@
 import Card from '@/components/Card';
 import Footer from '@/components/Footer';
+import { BASE_URL } from '@/constants';
 import { ProductModel } from '@/db/models/product';
 // import Link from 'next/link';
 
 const fetchProducts = async () => {
-  const res = await fetch('http://localhost:3000' + '/api/products', {
+  const res = await fetch(BASE_URL + '/api/products', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
