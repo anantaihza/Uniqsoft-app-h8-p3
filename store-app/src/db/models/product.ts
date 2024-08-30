@@ -26,12 +26,37 @@ export const getDB = async () => {
   return db;
 };
 
-export const getProducts = async () => {
+export const getProducts = async (
+  queryPage: string | null,
+  querySearch: string | null
+) => {
   const db = await getDB();
+
+  const limit = 8;
+  let offset: number;
+
+  if (!queryPage) {
+    offset = 0;
+  } else {
+    offset = (Number(queryPage) - 1) * limit;
+  }
+
+  let search = {};
+
+  if (querySearch) {
+    search = {
+      name: {
+        $regex: querySearch,
+        $options: 'i',
+      },
+    };
+  }
 
   const products = (await db
     .collection(COLLECTION_PRODUCT)
-    .find()
+    .find(search)
+    .skip(offset)
+    .limit(8)
     .toArray()) as ProductModel[];
 
   return products;

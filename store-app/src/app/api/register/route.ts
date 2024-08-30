@@ -12,8 +12,8 @@ export async function POST(request: Request) {
     const validateData = z
       .object({
         name: z.string().optional(),
-        username: z.string(), //! kurang unique
-        email: z.string().email(), //! kurang unique
+        username: z.string(),
+        email: z.string().email(),
         password: z.string().min(5),
       })
       .safeParse(body);
