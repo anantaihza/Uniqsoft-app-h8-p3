@@ -1,13 +1,10 @@
 'use client';
 
-import Card from '@/components/Card';
 import Footer from '@/components/Footer';
 import { BASE_URL } from '@/constants';
 import { ProductModel } from '@/db/models/product';
 import { useEffect, useState } from 'react';
 import { useDebounce } from 'use-debounce';
-import InfiniteScroll from 'react-infinite-scroll-component';
-import ListProduct from '@/components/products/ListProduct';
 import Pagination from '@/components/products/Pagination';
 import Search from '@/components/products/Search';
 
