@@ -33,9 +33,13 @@ export const createUser = async (user: UserModelInput) => {
     password: hashPassword(user.password),
   };
 
-  const newUser = await db.collection(COLLECTION_USER).insertOne(modifiedUser);
+  await db.collection(COLLECTION_USER).insertOne(modifiedUser);
 
-  return newUser;
+  return {
+    name: user.name,
+    username: user.username,
+    email: user.email
+  };
 };
 
 export const getUserByUsername = async (username: string) => {

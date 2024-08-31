@@ -64,6 +64,16 @@ export const getWishlist = async (id: string) => {
   return wishlist;
 };
 
+export const getWishlistById = async (productId: string, userId: string) => {
+  const db = await getDB();
+  const wishlist = await db.collection(COLLECTION_WISHLIST).findOne({
+    productId: new ObjectId(productId),
+    userId: new ObjectId(userId),
+  });
+
+  return wishlist;
+};
+
 export const createWishlist = async (wishlist: WishlistModelInput) => {
   const db = await getDB();
 

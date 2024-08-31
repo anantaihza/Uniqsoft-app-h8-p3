@@ -1,5 +1,5 @@
 import { getProducts } from '@/db/models/product';
-import { type NextRequest } from 'next/server';
+import { NextResponse, type NextRequest } from 'next/server';
 
 export async function GET(request: NextRequest) {
   try {
@@ -11,10 +11,10 @@ export async function GET(request: NextRequest) {
 
     const products = await getProducts(queryPage, querySearch);
 
-    return Response.json(products);
+    return NextResponse.json(products);
   } catch (error) {
     console.log(error);
-    return Response.json(
+    return NextResponse.json(
       {
         message: 'Internal Server Error',
       },

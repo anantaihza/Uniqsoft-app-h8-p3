@@ -21,8 +21,9 @@ export const AddWishlist = async (id: string) => {
   const result = await res.json();
 
   if (!res.ok) {
-    // console.log(result);
-    // console.log(res);
+    if (res.status === 403) {
+      return redirect("/products")
+    }
     return redirect('/login');
   }
 

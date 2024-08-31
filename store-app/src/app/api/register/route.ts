@@ -3,9 +3,10 @@ import {
   getUserByEmail,
   getUserByUsername,
 } from '@/db/models/user';
+import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 
-export async function POST(request: Request) {
+export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
 
@@ -30,14 +31,14 @@ export async function POST(request: Request) {
 
     const user = await createUser(body);
 
-    return Response.json(user, { status: 201 });
+    return NextResponse.json(user, { status: 201 });
   } catch (error: any) {
     if (error instanceof z.ZodError) {
       console.log(error.issues, '< error issue');
       const errorPath = error.issues[0].path[0];
       const errorMessage = error.issues[0].message;
 
-      return Response.json(
+      return NextResponse.json(
         {
           message: `${errorPath} ${errorMessage}`,
         },
@@ -45,19 +46,25 @@ export async function POST(request: Request) {
       );
     }
 
-    if (error.name === "NotUniqueUsername") {
-      return Response.json({
-        message: "Username is not unique"
-      }, {status: 400})
+    if (error.name === 'NotUniqueUsername') {
+      return NextResponse.json(
+        {
+          message: 'Username is not unique',
+        },
+        { status: 400 }
+      );
     }
 
-    if (error.name === "NotUniqueEmail") {
-      return Response.json({
-        message: "Email is not unique"
-      }, {status: 400})
+    if (error.name === 'NotUniqueEmail') {
+      return NextResponse.json(
+        {
+          message: 'Email is not unique',
+        },
+        { status: 400 }
+      );
     }
 
-    return Response.json(
+    return NextResponse.json(
       {
         message: 'Internal Server Error',
       },

@@ -1,4 +1,5 @@
 import { getProductById } from '@/db/models/product';
+import { NextRequest, NextResponse } from 'next/server';
 
 interface PropParams {
   params: {
@@ -6,13 +7,13 @@ interface PropParams {
   };
 }
 
-export async function GET(request: Request, { params }: PropParams) {
+export async function GET(request: NextRequest, { params }: PropParams) {
   try {
     const product = await getProductById(params.id);
 
-    return Response.json(product, { status: 200 });
+    return NextResponse.json(product, { status: 200 });
   } catch (error) {
-    return Response.json(
+    return NextResponse.json(
       {
         message: 'Internal Server Error',
       },
