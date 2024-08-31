@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 export default function Hero() {
   return (
@@ -16,7 +16,10 @@ export default function Hero() {
         </p>
 
         <div className="flex justify-center lg:justify-start">
-          <Link href="/products" className="btn btn-lg bg-[#FE9345] text-white rounded-full mt-10 flex gap-3 px-10">
+          <Link
+            href="/products"
+            className="btn btn-lg bg-[#FE9345] text-white rounded-full mt-10 flex gap-3 px-10"
+          >
             Shop Now!{' '}
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +39,6 @@ export default function Hero() {
         </div>
       </div>
       <div className="content-img w-[60%] h-[100vh] relative hidden lg:block">
-        {/* <Image src="/hero.png" width={1000} height={1000} alt='Hero' /> */}
         <img
           src="/hero3.png"
           alt=""

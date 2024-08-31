@@ -1,7 +1,6 @@
-import React from 'react';
 import Card from '../Card';
-import { ProductModel } from '@/db/models/product';
 import { BASE_URL } from '@/constants';
+import { ProductModel } from '@/db/models/product';
 
 const fetchNewProduct = async () => {
   const res = await fetch(BASE_URL + '/api/products/new', {
@@ -18,8 +17,6 @@ const fetchNewProduct = async () => {
 
 export default async function NewProducts() {
   const products: ProductModel[] = await fetchNewProduct();
-
-  // console.log(products);
 
   return (
     <section className="min-h-[90vh] container mx-auto px-10 lg:px-32 flex flex-col gap-28">

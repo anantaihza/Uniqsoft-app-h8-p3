@@ -5,7 +5,6 @@ export default function CountBoard() {
         <div className="stat text-center py-5">
           <div className="stat-title text-[#FE9345] font-bold">New Users</div>
           <div className="stat-value mt-2 text-[#303459] font-black">4,2K</div>
-          {/* <div className="stat-desc">↗︎ 400 (22%)</div> */}
         </div>
 
         <div className="stat text-center py-5">
@@ -13,13 +12,11 @@ export default function CountBoard() {
             New Registers
           </div>
           <div className="stat-value mt-2  text-[#303459] font-black">1,2K</div>
-          {/* <div className="stat-desc">↘︎ 90 (14%)</div> */}
         </div>
 
         <div className="stat text-center py-5">
           <div className="stat-title text-[#FE9345] font-bold">Products</div>
           <div className="stat-value mt-2  text-[#303459] font-black">31K</div>
-          {/* <div className="stat-desc">Jan 1st - Feb 1st</div> */}
         </div>
       </div>
     </section>

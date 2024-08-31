@@ -1,5 +1,5 @@
-import { BASE_URL } from '@/constants';
 import Link from 'next/link';
+import { BASE_URL } from '@/constants';
 import { redirect } from 'next/navigation';
 
 export default function page() {
