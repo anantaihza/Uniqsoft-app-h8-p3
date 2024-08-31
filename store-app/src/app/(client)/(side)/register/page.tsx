@@ -1,6 +1,12 @@
 import Link from 'next/link';
 import { BASE_URL } from '@/constants';
 import { redirect } from 'next/navigation';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Uniqsoft | Register",
+  description: "UniqSoft is a clothing store that focuses on softness and comfort. Our collection is designed to keep you feeling comfortable all day long."
+}
 
 export default function page() {
   const handleRegister = async (formData: FormData) => {

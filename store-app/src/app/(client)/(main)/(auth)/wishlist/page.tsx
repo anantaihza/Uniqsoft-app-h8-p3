@@ -4,6 +4,13 @@ import { ProductModel } from '@/db/models/product';
 import { ObjectId } from 'mongodb';
 import { cookies } from 'next/headers';
 
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Uniqsoft | Wishlist",
+  description: "UniqSoft is a clothing store that focuses on softness and comfort. Our collection is designed to keep you feeling comfortable all day long."
+}
+
 export interface TypeItem {
   _id: ObjectId;
   product: ProductModel;

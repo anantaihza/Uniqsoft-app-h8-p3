@@ -1,6 +1,6 @@
 export default function Search({setSearch}: {setSearch: Function}) {
   return (
-    <label className="input input-bordered flex items-center gap-2 my-10">
+    <label className="input input-bordered flex items-center gap-2 my-10 px-10 rounded-full">
       <input
         type="text"
         className="grow"

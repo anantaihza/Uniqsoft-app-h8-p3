@@ -3,6 +3,12 @@ import Link from 'next/link';
 import { BASE_URL } from '@/constants';
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Uniqsoft | Login",
+  description: "UniqSoft is a clothing store that focuses on softness and comfort. Our collection is designed to keep you feeling comfortable all day long."
+}
 
 export default function Login() {
   const handleLogin = async (formData: FormData) => {
