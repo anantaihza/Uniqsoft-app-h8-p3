@@ -1,7 +1,7 @@
 'use client';
 
 import Footer from '@/components/Footer';
-// import { BASE_URL } from '@/constants';
+import { BASE_URL } from '@/constants';
 import { ProductModel } from '@/db/models/product';
 import { useEffect, useState } from 'react';
 import { useDebounce } from 'use-debounce';
@@ -17,12 +17,15 @@ export default function page() {
   const [debouncedValue] = useDebounce(search, 1000);
 
   const fetchProducts = async () => {
-    let url = process.env.BASE_URL + '/api/products';
+    let url = BASE_URL + '/api/products';
 
     if (!search) {
       url += `?page=${page}`;
       const res = await fetch(url, {
         method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
       });
 
       const data = await res.json();
