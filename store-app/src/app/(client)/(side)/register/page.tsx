@@ -4,11 +4,18 @@ import { redirect } from 'next/navigation';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Uniqsoft | Register",
-  description: "UniqSoft is a clothing store that focuses on softness and comfort. Our collection is designed to keep you feeling comfortable all day long."
+  title: 'Uniqsoft | Register',
+  description:
+    'UniqSoft is a clothing store that focuses on softness and comfort. Our collection is designed to keep you feeling comfortable all day long.',
+};
+
+interface TypeParams {
+  searchParams: {
+    error: string;
+  };
 }
 
-export default function page() {
+export default function page({ searchParams }: TypeParams) {
   const handleRegister = async (formData: FormData) => {
     'use server';
 
@@ -34,9 +41,10 @@ export default function page() {
     return redirect('/login');
   };
 
+
   return (
     <div className="min-h-screen container mx-auto py-20 px-10 lg:px-32 flex gap-20 flex-row-reverse">
-      <div className="hidden lg:block w-[55%] min-h-96 bg-[#FE9345] text-white rounded-xl relative">
+      <div className="hidden lg:block w-[55%] min-h-96 bg-[#FE9345] text-white rounded-3xl relative">
         <div className="relative z-20 px-20 py-16">
           <h6 className="font-bold text-xl">Best Clothing Store</h6>
           <h2 className="font-black text-6xl">UniqSoft</h2>
@@ -60,7 +68,26 @@ export default function page() {
         <h2 className="font-black text-5xl mt-5">Welcome to Store</h2>
         <p className="text-[#A3A2A8] mt-3">Please create your account</p>
 
-        <form action={handleRegister} className="mt-10 flex flex-col gap-5">
+        {searchParams.error ? (
+          <div role="alert" className="alert alert-error text-white mt-4 rounded-full px-6">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6 shrink-0 stroke-current"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            <span>{searchParams.error}</span>
+          </div>
+        ) : null}
+
+        <form action={handleRegister} className="mt-3 flex flex-col gap-5">
           <label className="input py-7 input-bordered flex items-center gap-4 rounded-xl">
             <svg
               xmlns="http://www.w3.org/2000/svg"

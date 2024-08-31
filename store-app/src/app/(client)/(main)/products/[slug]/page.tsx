@@ -25,11 +25,9 @@ export async function generateMetadata({
 
   return {
     title: `Unisoft | ${data.name}`,
-    description: data.description
-  }
+    description: data.description,
+  };
 }
-
-
 
 const fetchDetailProduct = async (slug: string) => {
   const splitSlug = slug.split('-');
@@ -47,9 +45,16 @@ const fetchDetailProduct = async (slug: string) => {
   return data;
 };
 
-export default async function page({ params }: TypeProp) {
+interface TypeParams extends TypeProp {
+  searchParams: {
+    error: string;
+  };
+}
+
+export default async function page({ params, searchParams }: TypeParams) {
   const product: ProductModel = await fetchDetailProduct(params.slug);
 
+  // console.log(searchParams)
   return (
     <div className="container min-h-screen mx-auto px-10 lg:px-32 flex gap-6">
       <div className="content-img w-[50%] my-auto">
@@ -74,6 +79,25 @@ export default async function page({ params }: TypeProp) {
         </div>
       </div>
       <div className="content w-[50%] my-auto">
+        {searchParams.error ? (
+          <div role="alert" className="alert alert-error text-white mb-10 rounded-full px-6">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6 shrink-0 stroke-current"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            <span>{searchParams.error}</span>
+          </div>
+        ) : null}
+        
         <div className="flex gap-3">
           {product.tags
             ? product.tags.map((tag, index) => {
@@ -117,7 +141,7 @@ export default async function page({ params }: TypeProp) {
           <p className="text-[#A3A2A8]">{product.description}</p>
         </div>
 
-        <Button productId={String(product._id)} />
+        <Button productId={String(product._id)} slug={product.slug} />
       </div>
     </div>
   );

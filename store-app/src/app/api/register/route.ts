@@ -34,7 +34,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json(user, { status: 201 });
   } catch (error: any) {
     if (error instanceof z.ZodError) {
-      console.log(error.issues, '< error issue');
+      // console.log(error.issues, '< error issue');
       const errorPath = error.issues[0].path[0];
       const errorMessage = error.issues[0].message;
 

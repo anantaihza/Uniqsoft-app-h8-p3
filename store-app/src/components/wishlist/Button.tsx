@@ -2,14 +2,14 @@
 
 import { AddWishlist } from '@/actions/wishlist';
 
-export default function Button({ productId }: { productId: string }) {
-  const handleWishlist = async (id: string) => {
-    await AddWishlist(id);
+export default function Button({ productId, slug }: { productId: string, slug: string }) {
+  const handleWishlist = async (id: string, slug: string) => {
+    await AddWishlist(id, slug);
   };
 
   return (
     <button
-      onClick={() => handleWishlist(productId)}
+      onClick={() => handleWishlist(productId, slug)}
       className="btn btn-lg bg-[#FE9345] text-white rounded-full mt-10 flex gap-3 px-10"
     >
       <svg

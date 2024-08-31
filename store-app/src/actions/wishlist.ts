@@ -4,7 +4,7 @@ import { BASE_URL } from '@/constants';
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 
-export const AddWishlist = async (id: string) => {
+export const AddWishlist = async (id: string, slug: string) => {
   'use server';
 
   const res = await fetch('http://localhost:3000' + '/api/wishlist', {
@@ -22,7 +22,7 @@ export const AddWishlist = async (id: string) => {
 
   if (!res.ok) {
     if (res.status === 403) {
-      return redirect("/products")
+      return redirect(`/products/${slug}?error=You cannot love this product twice`)
     }
     return redirect('/login');
   }
