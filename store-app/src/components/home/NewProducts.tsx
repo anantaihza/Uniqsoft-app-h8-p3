@@ -1,9 +1,9 @@
 import Card from '../Card';
-import { BASE_URL } from '@/constants';
+// import { BASE_URL } from '@/constants';
 import { ProductModel } from '@/db/models/product';
 
 const fetchNewProduct = async () => {
-  const res = await fetch(BASE_URL + '/api/products/new', {
+  const res = await fetch(process.env.BASE_URL + '/api/products/new', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',

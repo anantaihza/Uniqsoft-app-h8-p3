@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { BASE_URL } from '@/constants';
+// import { BASE_URL } from '@/constants';
 import { redirect } from 'next/navigation';
 import type { Metadata } from 'next';
 
@@ -24,7 +24,7 @@ export default function page({ searchParams }: TypeParams) {
     const email = formData.get('email');
     const password = formData.get('password');
 
-    const res = await fetch(BASE_URL + '/api/register', {
+    const res = await fetch(process.env.BASE_URL + '/api/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

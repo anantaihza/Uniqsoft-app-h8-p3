@@ -1,6 +1,6 @@
 // import ServerPublic from '@/components/protect-server/ServerPublic';
 import Link from 'next/link';
-import { BASE_URL } from '@/constants';
+// import { process.env.BASE_URL } from '@/constants';
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 import type { Metadata } from 'next';
@@ -30,7 +30,7 @@ export default function Login({ searchParams }: TypeParams) {
     const email = formData.get('email');
     const password = formData.get('password');
 
-    const res = await fetch(BASE_URL + '/api/login', {
+    const res = await fetch(process.env.BASE_URL + '/api/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

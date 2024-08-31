@@ -1,5 +1,5 @@
 import ListWishlist from '@/components/wishlist/ListWishlist';
-import { BASE_URL } from '@/constants';
+// import { BASE_URL } from '@/constants';
 import { ProductModel } from '@/db/models/product';
 import { ObjectId } from 'mongodb';
 import { cookies } from 'next/headers';
@@ -17,7 +17,7 @@ export interface TypeItem {
 }
 
 const fetchWishlist = async () => {
-  const res = await fetch(BASE_URL + '/api/wishlist', {
+  const res = await fetch(process.env.BASE_URL + '/api/wishlist', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',

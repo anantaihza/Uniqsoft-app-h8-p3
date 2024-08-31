@@ -1,5 +1,5 @@
 import Button from '@/components/wishlist/Button';
-import { BASE_URL } from '@/constants';
+// import { process.env.BASE_URL } from '@/constants';
 import { ProductModel } from '@/db/models/product';
 import Link from 'next/link';
 
@@ -17,14 +17,14 @@ export async function generateMetadata({
   const splitSlug = params.slug.split('-');
   const id = splitSlug[splitSlug.length - 1];
 
-  const res = await fetch(BASE_URL + `/api/products/${id}`, {
+  const res = await fetch(process.env.BASE_URL + `/api/products/${id}`, {
     method: 'GET',
   });
 
   const data = await res.json();
 
   return {
-    title: `Unisoft | ${data.name}`,
+    title: `Uniqsoft | ${data.name}`,
     description: data.description,
   };
 }
@@ -33,7 +33,7 @@ const fetchDetailProduct = async (slug: string) => {
   const splitSlug = slug.split('-');
   const id = splitSlug[splitSlug.length - 1];
 
-  const res = await fetch(BASE_URL + `/api/products/${id}`, {
+  const res = await fetch(process.env.BASE_URL + `/api/products/${id}`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
