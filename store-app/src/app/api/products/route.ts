@@ -2,8 +2,8 @@ import { getProducts } from '@/db/models/product';
 import { NextResponse, type NextRequest } from 'next/server';
 
 export async function GET(request: NextRequest) {
+  const searchParams = request.nextUrl.searchParams;
   try {
-    const searchParams = request.nextUrl.searchParams;
     const queryPage: string | null = searchParams.get('page');
     const querySearch: string | null = searchParams.get('search');
     // console.log(typeof queryPage);
