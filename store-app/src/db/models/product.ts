@@ -35,32 +35,41 @@ export const getProducts = async (
   const limit = 8;
   let offset: number;
 
-  if (!queryPage) {
-    offset = 0;
-  } else {
-    offset = (Number(queryPage) - 1) * limit;
-  }
+  let products: ProductModel[];
 
-  let search = {};
-
-  if (querySearch) {
-    search = {
+  if (querySearch || querySearch === "") {
+    let search = {
       name: {
         $regex: querySearch,
         $options: 'i',
       },
     };
+
+    products = (await db
+      .collection(COLLECTION_PRODUCT)
+      .find(search)
+      .toArray()) as ProductModel[];
+    
+  } else {
+    if (!queryPage) {
+      offset = 0;
+    } else {
+      offset = (Number(queryPage) - 1) * limit;
+    }
+
+    products = (await db
+      .collection(COLLECTION_PRODUCT)
+      .find()
+      .skip(offset)
+      .limit(8)
+      .toArray()) as ProductModel[];
+  
   }
 
-  const products = (await db
-    .collection(COLLECTION_PRODUCT)
-    .find(search)
-    .skip(offset)
-    .limit(8)
-    .toArray()) as ProductModel[];
-
-  return products;
+  // console.log(products.length);
+    return products;
 };
+
 
 export const getProductById = async (id: string) => {
   const db = await getDB();

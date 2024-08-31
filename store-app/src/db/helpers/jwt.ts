@@ -14,7 +14,7 @@ export const verifyToken = (token: string) => {
 
 export const verifyTokenJose = async <T>(token: string) => {
   const secretKey = new TextEncoder().encode(SECRET);
-  const payloadJose = await jose.jwtVerify<T>(token, secretKey);
+  const payloadJose = await jose.jwtVerify<T>(token, secretKey); // { _id: string }
 
   // payload: { _id: '66cdd504628ee53c8663e5a0', iat: 1724841526 },
   // console.log(payloadJose, 'Payload jose');

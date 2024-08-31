@@ -35,6 +35,8 @@ export async function middleware(request: NextRequest) {
     //! bagian sini belum ngerti di type generic
     const decoded = await verifyTokenJose<TypeJWT>(access_token);
 
+    // await verifyTokenJose<{ name: string, age: number }>(tokenlain) // { name: string, age: number }
+
     //! dari sini belum ngerti di headers2 ini
     const requestHeaders = new Headers(request.headers);
 
