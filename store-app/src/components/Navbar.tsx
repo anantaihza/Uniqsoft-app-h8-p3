@@ -67,7 +67,7 @@ export default function Navbar() {
         </ul>
       </div>
       <div className="navbar-end gap-5">
-        <Link href="/wishlist">
+        <Link href="/wishlist" className='hover:text-[#FE9345]'>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -86,7 +86,7 @@ export default function Navbar() {
         {cookies().get('Authorization') ? (
           <div className="">
             <form action={handleLogout}>
-              <button type="submit">Logout</button>
+              <button type="submit" className='hover:text-[#FE9345]'>Logout</button>
             </form>
           </div>
         ) : (
