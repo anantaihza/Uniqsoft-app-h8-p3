@@ -1,10 +1,10 @@
 'use client';
 
-import { AddWishlist } from '@/actions/wishlist';
+import { AddWishlistDetail } from '@/actions/wishlist';
 
 export default function Button({ productId, slug }: { productId: string, slug: string }) {
   const handleWishlist = async (id: string, slug: string) => {
-    await AddWishlist(id, slug);
+    await AddWishlistDetail(id, slug);
   };
 
   return (
